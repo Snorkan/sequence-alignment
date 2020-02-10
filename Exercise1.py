@@ -12,5 +12,4 @@ def exercise1(file):
         s = ReverseComplement.ReverseComplement().get(seq.sequence)
         sys.stdout.write("%s: %s\n" % (rev_gene, s))
 
-exercise1(file)
 

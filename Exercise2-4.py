@@ -22,8 +22,6 @@ def exercise2(fasta):
         positions.append("%s: %s" % (q.gene, get_positions.forward_strand(f.sequence, q.sequence)))
     sys.stdout.write("Alignment Positions | %s: %s\n" % (f.gene, positions))
 
-exercise2(seq_store[2])
-
 
 # Same as Ex2, but now we check alignment for the reverse strand as well
 def exercise3(fasta):
@@ -34,8 +32,6 @@ def exercise3(fasta):
         positions.append("%s: %s" % (q.gene, get_positions.both_strands(f.sequence, q.sequence)))
     sys.stdout.write("Alignment Positions | %s: %s\n" % (f.gene, positions))
 
-exercise3(seq_store[2])
-
 
 # Same as Ex3 but allows up to two mismatches
 def exercise4(fasta):
@@ -45,6 +41,4 @@ def exercise4(fasta):
         q = fasta_object.format(query)
         positions.append("%s: %s" % (f.gene, get_positions.with_mismatch(f.sequence, q.sequence)))
     sys.stdout.write("Alignment Positions | %s: %s\n" % (f.gene, positions))
-
-exercise4(seq_store[2])
 
